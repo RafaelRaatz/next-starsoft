@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { SlHandbag } from 'react-icons/sl'
 import { Container } from './styles'
 
 export function Header() {

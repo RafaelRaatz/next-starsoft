@@ -5,7 +5,7 @@ export const Container = styled.header`
   width: 100%;
   height: 90px;
   display: flex;
-  border-bottom: 1px solid #393939;
+  border-bottom: 2px solid #393939;
 
   .header-content {
     display: flex;
@@ -14,7 +14,7 @@ export const Container = styled.header`
     max-width: 1728px;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
 
     .header-card {
       display: flex;
