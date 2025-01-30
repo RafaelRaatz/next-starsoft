@@ -3,9 +3,12 @@ import styled from 'styled-components'
 
 export const Container = styled.header`
   width: 100%;
+
   height: 90px;
   display: flex;
   border-bottom: 2px solid #393939;
+
+  background-color: #232323;
 
   .header-content {
     display: flex;

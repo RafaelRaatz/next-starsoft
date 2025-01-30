@@ -1,7 +1,11 @@
+'use client'
 import Image from 'next/image'
 import { Container } from './styles'
+import { useDispatch } from 'react-redux'
+import { toggleCart } from '@/store/cartSlice'
 
 export function Header() {
+  const dispatch = useDispatch()
   return (
     <Container>
       <div className="header-content">
@@ -13,7 +17,10 @@ export function Header() {
           sizes="(max-width: 600px) 50vw, 25vw"
         />
         <div className="header-card">
-          <button className="header-button">
+          <button
+            onClick={() => dispatch(toggleCart())}
+            className="header-button"
+          >
             <Image
               src="/bag.png"
               alt="bag"
