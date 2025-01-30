@@ -1,17 +1,18 @@
+import { Card } from '@/components'
 import { Container } from '@/styles/Home'
 
 export default function Home() {
   return (
     <Container>
       <div className="list-cards">
-        <div className="card">card</div>
-        <div className="card">card</div>
-        <div className="card">card</div>
-        <div className="card">card</div>
-        <div className="card">card</div>
-        <div className="card">card</div>
-        <div className="card">card</div>
-        <div className="card">card</div>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </div>
       <div className="load-area">
         <span>barra de progresso</span>

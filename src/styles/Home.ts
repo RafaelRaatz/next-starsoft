@@ -1,7 +1,7 @@
 'use client'
 import styled from 'styled-components'
 
-export const Container = styled.main`
+export const Container = styled.div`
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -18,13 +18,6 @@ export const Container = styled.main`
     width: 100%;
     max-width: 1455px;
     margin: auto;
-
-    .card {
-      width: 345px;
-      height: 555px;
-      border: 1px solid #fff;
-      border-radius: 8px;
-    }
   }
 
   .load-area {
