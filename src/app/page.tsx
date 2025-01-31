@@ -1,5 +1,4 @@
-import { Card, CardList } from '@/components'
-import { Container } from '@/styles/Home'
+import { CardList, Footer, Header } from '@/components'
 import { ProductProps } from '@/utils/types/products'
 
 async function getListProducts() {
@@ -22,7 +21,9 @@ export default async function Home() {
 
   return (
     <div>
+      <Header />
       <CardList listProducts={listProducts} />
+      <Footer />
     </div>
   )
 }

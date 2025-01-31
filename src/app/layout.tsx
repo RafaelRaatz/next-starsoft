@@ -1,7 +1,7 @@
 import '@/styles/GlobalStyles.css'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
-import { Cart, Footer, Header } from '@/components'
+import { Cart } from '@/components'
 import StyledComponentsRegistry from './lib/registry'
 import { Providers } from '@/providers/providers'
 
@@ -27,9 +27,8 @@ export default function RootLayout({
         <body className={poppins.variable}>
           <Providers>
             <Cart />
-            <Header />
+
             <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-            <Footer />
           </Providers>
         </body>
       </html>

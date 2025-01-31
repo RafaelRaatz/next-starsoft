@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Container } from './styles'
 import { ProductProps } from '@/utils/types/products'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '@/store/cartSlice'
 
 interface CardProps {
   data: ProductProps
@@ -9,6 +11,11 @@ interface CardProps {
 
 export function Card({ data }: CardProps) {
   const charLimit = 80
+  const dispatch = useDispatch()
+
+  const handleBuy = () => {
+    dispatch(addToCart(data)) // Adiciona o produto ao carrinho
+  }
 
   return (
     <Container>
@@ -19,6 +26,7 @@ export function Card({ data }: CardProps) {
             alt={data.name}
             width={296}
             height={258}
+            loading="lazy"
             className="image"
           />
 
@@ -35,7 +43,9 @@ export function Card({ data }: CardProps) {
             </div>
           </div>
         </Link>
-        <button className="card-button">COMPRAR</button>
+        <button onClick={handleBuy} className="card-button">
+          COMPRAR
+        </button>
       </div>
     </Container>
   )

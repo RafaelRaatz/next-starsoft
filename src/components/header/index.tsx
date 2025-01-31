@@ -1,11 +1,13 @@
 'use client'
 import Image from 'next/image'
 import { Container } from './styles'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { toggleCart } from '@/store/cartSlice'
+import { RootState } from '@/store'
 
 export function Header() {
   const dispatch = useDispatch()
+  const cartCount = useSelector((state: RootState) => state.cart.items.length)
   return (
     <Container>
       <div className="header-content">
@@ -29,7 +31,7 @@ export function Header() {
               sizes="(max-width: 600px) 50vw, 25vw"
             />
           </button>
-          <span className="header-count-card">0</span>
+          <span className="header-count-card">{cartCount}</span>
         </div>
       </div>
     </Container>
