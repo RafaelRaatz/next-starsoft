@@ -4,6 +4,8 @@ import { Poppins } from 'next/font/google'
 import { Cart } from '@/components'
 import StyledComponentsRegistry from './lib/registry'
 import { Providers } from '@/providers/providers'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const poppins = Poppins({
   weight: ['400', '600'],
@@ -27,8 +29,8 @@ export default function RootLayout({
         <body className={poppins.variable}>
           <Providers>
             <Cart />
-
             <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+            <ToastContainer />
           </Providers>
         </body>
       </html>

@@ -19,11 +19,11 @@ export const Cart = () => {
   const isOpen = useSelector((state: RootState) => state.cart.isOpen)
   const cartItems = useSelector((state: RootState) => state.cart.items)
 
-  // Função para calcular o valor total do carrinho
   const calculateCartTotal = () => {
-    return cartItems
-      .reduce((total, item) => total + item.price * item.quantity, 0)
-      .toFixed(2)
+    return cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    )
   }
 
   return (
@@ -53,7 +53,7 @@ export const Cart = () => {
               </div>
 
               <div className="cart-infos">
-                {cartItems.length === 0 ? ( // Verifica se o carrinho está vazio
+                {cartItems.length === 0 ? (
                   <p className="empty-cart-message">Seu carrinho está vazio.</p>
                 ) : (
                   <>

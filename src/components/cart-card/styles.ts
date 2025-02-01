@@ -12,6 +12,13 @@ export const Container = styled.div`
   border-radius: 8px;
   gap: 30px;
 
+  @media (max-width: 680px) {
+    width: 350px;
+    height: 400px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .card-image {
     background-color: #191a20;
     border-radius: 8px;
@@ -21,6 +28,20 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    @media (max-width: 680px) {
+      gap: 20px;
+    }
+
+    .cart-card-info {
+      @media (max-width: 680px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 280px;
+      }
+    }
 
     .card-description {
       font-size: 12px;
@@ -39,12 +60,21 @@ export const Container = styled.div`
     align-items: center;
 
     .quantity-button {
-      width: 115px;
-      height: 49px;
+      width: 40px;
       border: none;
       border-radius: 8px;
       background-color: #232323;
       color: #ffffff;
+    }
+
+    .decrease-increase {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 115px;
+      height: 49px;
+      background-color: #232323;
+      border-radius: 8px;
     }
 
     .trash-button {

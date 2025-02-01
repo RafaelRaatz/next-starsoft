@@ -5,7 +5,12 @@ const nextConfig: NextConfig = {
     styledComponents: true,
   },
   images: {
-    domains: ['softstar.s3.amazonaws.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'softstar.s3.amazonaws.com',
+      },
+    ],
   },
 }
 

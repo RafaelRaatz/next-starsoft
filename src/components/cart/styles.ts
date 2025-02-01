@@ -23,6 +23,10 @@ export const Container = styled.div<{ $isOpen: boolean }>`
     opacity 0.3s ease,
     transform 0.3s ease-in-out;
 
+  @media (max-width: 680px) {
+    width: 375px;
+  }
+
   overflow-y: auto;
 
   .cart {
@@ -33,11 +37,21 @@ export const Container = styled.div<{ $isOpen: boolean }>`
     margin-top: 40px;
     width: 620px;
 
+    @media (max-width: 680px) {
+      width: 375px;
+      gap: 50px;
+    }
+
     .cart-title {
       display: flex;
       width: 550px;
-      justify-content: space-between;
+      gap: 100px;
       align-items: center;
+
+      @media (max-width: 680px) {
+        width: 350px;
+        gap: 20px;
+      }
 
       .close-button {
         width: 60px;
@@ -45,6 +59,11 @@ export const Container = styled.div<{ $isOpen: boolean }>`
         background-color: #393939;
         border: none;
         border-radius: 100%;
+
+        @media (max-width: 680px) {
+          width: 50px;
+          height: 50px;
+        }
 
         .close-icon {
           width: 30px;
@@ -58,6 +77,10 @@ export const Container = styled.div<{ $isOpen: boolean }>`
       display: flex;
       flex-direction: column;
       gap: 50px;
+
+      @media (max-width: 680px) {
+        width: 350px;
+      }
 
       .list-cards {
         display: flex;
@@ -84,6 +107,11 @@ export const Container = styled.div<{ $isOpen: boolean }>`
         background-color: #ff8310;
         color: #fff;
         font-size: 22px;
+
+        @media (max-width: 680px) {
+          width: 350px;
+          height: 50px;
+        }
       }
     }
   }

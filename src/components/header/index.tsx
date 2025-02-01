@@ -4,6 +4,7 @@ import { Container } from './styles'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleCart } from '@/store/cartSlice'
 import { RootState } from '@/store'
+import Link from 'next/link'
 
 export function Header() {
   const dispatch = useDispatch()
@@ -11,13 +12,15 @@ export function Header() {
   return (
     <Container>
       <div className="header-content">
-        <Image
-          src="/logo.png"
-          alt="Logo"
-          width={101}
-          height={38}
-          sizes="(max-width: 600px) 50vw, 25vw"
-        />
+        <Link href="/">
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={101}
+            height={38}
+            sizes="(max-width: 600px) 50vw, 25vw"
+          />
+        </Link>
         <div className="header-card">
           <button
             onClick={() => dispatch(toggleCart())}
