@@ -26,6 +26,12 @@ Este projeto é uma aplicação web desenvolvida com Next.js para um marketplace
 - 🌟 Animações suaves para uma melhor experiência.
 - 📲 Layout Responsivo.
 
+## 🧪 Testes
+
+- 👨‍💻 Renderização de produtos.
+- 🖱️  botões e suas funções.
+- 🧩 Funções da logica em geral como adicionar/remover/aumentar/diminuir produtos ao carrinho.
+
 ## 📂 Configuração e Execução
 
 ### ✅ Pré-requisitos
@@ -82,5 +88,20 @@ npm test
 ## 📝 Observações
 
 - Nas novas versões do Next.js, os métodos como getStaticProps e getServerSideProps não são mais suportados em arquivos dentro da pasta app. Por isso, optei por usar fetch diretamente, garantindo mais flexibilidade e simplicidade no consumo da API, além de facilitar o gerenciamento de estado na aplicação.
+
+- ### Estrutura de pastas
+
+- **`__tests__`**: contém os testes.
+- **`public`**: Imagens necessárias para o projeto.
+- **`src`**: contém o código-fonte do projeto.
+    - **`app`** → Contém as páginas e a estrutura principal da aplicação
+        - **`product`** → Pagina de detalhes e seus components.
+        - **`lib`** →configurando o suporte para o `styled-components`
+    - **`components`** → Componentes reutilizáveis da interface.
+    - **`providers`** → Contextos e provedores globais.
+    - **`store`** → Gerenciamento de estado, com Redux Toolkit.
+    - **`styles`** → Arquivos de estilização e configurações globais.
+    - **`utils`** → Funções auxiliares e utilitárias usadas no projeto.
+- *Arquivos de configuração da raiz do projeto como docker, jest, prettier etc.*
 
 ---
