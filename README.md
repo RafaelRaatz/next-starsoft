@@ -36,30 +36,28 @@ Certifique-se de ter instalado:
 - Gerenciador de pacotes (Yarn ou npm)
 - Docker Desktop
 
-### 🔧 Instalação
+# 🔧 Instalação
 
-# Instale as dependências
+## Instale as dependências
 
 yarn install
 
-# ou
+### ou
 
 npm install
 
 ````
+Configurar as Variáveis de Ambiente
 
-### Configurar as Variáveis de Ambiente**
 Crie um arquivo `.env.local` na raiz do projeto e defina as variáveis necessárias:
-```
 NEXT_API_URL=https://starsoft-challenge-7dfd4a56a575.herokuapp.com
-```
 
-### ▶️ Executando o projeto
-```sh
-# Inicie o Docker Desktop e execute o seguinte comando:
+▶️ Executando o projeto
+
+Inicie o Docker Desktop e execute o seguinte comando:
 docker compose up -d
 
-# Inicie o servidor de desenvolvimento
+Inicie o servidor de desenvolvimento
 yarn dev
 # ou
 npm run dev
