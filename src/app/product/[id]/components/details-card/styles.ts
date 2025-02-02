@@ -1,5 +1,5 @@
-'use client'
-import styled from 'styled-components'
+'use client';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
@@ -15,6 +15,10 @@ export const Container = styled.div`
     border-radius: 8px;
     background-color: #191a20;
 
+    @media (max-width: 900px) {
+      width: 350px;
+    }
+
     .card-content {
       display: flex;
       gap: 25px;
@@ -27,14 +31,27 @@ export const Container = styled.div`
         display: flex;
         gap: 40px;
 
+        @media (max-width: 900px) {
+          flex-direction: column;
+        }
+
         .image {
           border-radius: 8px;
+
+          @media (max-width: 900px) {
+            width: 320px;
+            height: 300px;
+          }
         }
 
         .card-info {
           display: flex;
           flex-direction: column;
           gap: 30px;
+
+          @media (max-width: 900px) {
+            align-items: center;
+          }
 
           .card-title {
             font-size: 32px;
@@ -90,4 +107,4 @@ export const Container = styled.div`
       width: 350px;
     }
   }
-`
+`;

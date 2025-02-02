@@ -1,1 +1,1 @@
-export { DetailsCard } from './details-card'
+export { DetailsCard } from './details-card';

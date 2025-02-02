@@ -1,29 +1,31 @@
-import { CardList, Footer, Header } from '@/components'
-import { ProductProps } from '@/utils/types/products'
+import { CardList, Footer, Header } from '@/components';
+import { applyCorrections } from '@/utils/corrections';
+import { ProductProps } from '@/utils/types/products';
 
 async function getListProducts() {
   try {
-    const res = await fetch(`${process.env.NEXT_API_URL}/v1/products`)
+    const res = await fetch(`${process.env.NEXT_API_URL}/v1/products`, {
+      next: { revalidate: 60 },
+      cache: 'force-cache',
+    });
 
     if (!res.ok) {
-      throw new Error('Erro ao buscar produtos')
+      throw new Error('Erro ao buscar produtos');
     }
 
-    const { data } = await res.json()
-    return data || []
+    const { data } = await res.json();
+    return data.map(applyCorrections) || [];
   } catch (err) {
-    throw new Error('failed to fetch data')
+    throw new Error('Erro ao buscar data');
   }
 }
 
 export default async function Home() {
-  const listProducts: ProductProps[] = await getListProducts()
+  const listProducts: ProductProps[] = await getListProducts();
 
   return (
     <div>
-      <Header />
       <CardList listProducts={listProducts} />
-      <Footer />
     </div>
-  )
+  );
 }

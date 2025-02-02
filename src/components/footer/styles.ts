@@ -1,5 +1,5 @@
-'use client'
-import styled from 'styled-components'
+'use client';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   height: 76px;
@@ -8,4 +8,4 @@ export const Container = styled.div`
   justify-content: center;
   color: #393939;
   margin-top: 150px;
-`
+`;

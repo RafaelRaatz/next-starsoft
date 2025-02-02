@@ -1,7 +1,18 @@
 {
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "tabWidth": 2
-  }
-  
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "printWidth": 80,
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "quoteProps": "consistent",
+  "jsxSingleQuote": true,
+  "proseWrap": "preserve",
+  "htmlWhitespaceSensitivity": "ignore",
+  "useTabs": false,
+  "insertPragma": false,
+  "requirePragma": false,
+  "eslintIntegration": true
+}

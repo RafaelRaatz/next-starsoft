@@ -1,30 +1,29 @@
-'use client'
-
-import { useDispatch, useSelector } from 'react-redux'
+'use client';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useDispatch, useSelector } from 'react-redux';
+import { FiArrowLeft } from 'react-icons/fi';
+import { CartCard } from '../cart-card';
+import { Container } from './styles';
+import { RootState } from '@/store';
+import Image from 'next/image';
 import {
   closeCart,
   decreaseQuantity,
   increaseQuantity,
   removeFromCart,
-} from '@/store/cartSlice'
-import { RootState } from '@/store'
-import { Container } from './styles'
-import { motion, AnimatePresence } from 'framer-motion'
-import Image from 'next/image'
-import { FiArrowLeft } from 'react-icons/fi'
-import { CartCard } from '../cart-card'
+} from '@/store/cartSlice';
 
 export const Cart = () => {
-  const dispatch = useDispatch()
-  const isOpen = useSelector((state: RootState) => state.cart.isOpen)
-  const cartItems = useSelector((state: RootState) => state.cart.items)
+  const dispatch = useDispatch();
+  const isOpen = useSelector((state: RootState) => state.cart.isOpen);
+  const cartItems = useSelector((state: RootState) => state.cart.items);
 
   const calculateCartTotal = () => {
     return cartItems.reduce(
       (total, item) => total + item.price * item.quantity,
-      0
-    )
-  }
+      0,
+    );
+  };
 
   return (
     <AnimatePresence>
@@ -40,24 +39,25 @@ export const Cart = () => {
           }}
         >
           <Container $isOpen={isOpen}>
-            <div className="cart">
-              <div className="cart-title">
+            <div className='cart'>
+              <div className='cart-title'>
                 <button
-                  className="close-button"
+                  aria-label='close'
+                  className='close-button'
                   onClick={() => dispatch(closeCart())}
                 >
-                  <FiArrowLeft className="close-icon" />
+                  <FiArrowLeft className='close-icon' />
                 </button>
 
                 <h2>Mochila de Compras</h2>
               </div>
 
-              <div className="cart-infos">
+              <div className='cart-infos'>
                 {cartItems.length === 0 ? (
-                  <p className="empty-cart-message">Seu carrinho está vazio.</p>
+                  <p className='empty-cart-message'>Seu carrinho está vazio.</p>
                 ) : (
                   <>
-                    <div className="list-cards">
+                    <div className='list-cards'>
                       {cartItems.map((item) => (
                         <CartCard
                           key={item.id}
@@ -69,12 +69,12 @@ export const Cart = () => {
                       ))}
                     </div>
 
-                    <div className="cart-value">
+                    <div className='cart-value'>
                       <h2>Total</h2>
-                      <div className="cart-total-price">
+                      <div className='cart-total-price'>
                         <Image
-                          src="/ellipse770.png"
-                          alt="Logo"
+                          src='/ellipse770.png'
+                          alt='Logo'
                           width={29}
                           height={29}
                         />
@@ -82,7 +82,7 @@ export const Cart = () => {
                       </div>
                     </div>
 
-                    <button className="cart-button">FINALIZAR COMPRA</button>
+                    <button className='cart-button'>FINALIZAR COMPRA</button>
                   </>
                 )}
               </div>
@@ -91,5 +91,5 @@ export const Cart = () => {
         </motion.div>
       )}
     </AnimatePresence>
-  )
-}
+  );
+};

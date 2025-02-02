@@ -1,5 +1,5 @@
-'use client'
-import styled from 'styled-components'
+'use client';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 345px;
@@ -67,4 +67,4 @@ export const Container = styled.div`
       font-size: 16px;
     }
   }
-`
+`;

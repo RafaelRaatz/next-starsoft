@@ -1,5 +1,5 @@
-'use client'
-import styled from 'styled-components'
+'use client';
+import styled from 'styled-components';
 
 export const Container = styled.header`
   width: 100%;
@@ -34,4 +34,4 @@ export const Container = styled.header`
       }
     }
   }
-`
+`;
