@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next-Starsoft
 
-## Getting Started
+## 📌 Descrição
 
-First, run the development server:
+Este projeto é uma aplicação web desenvolvida com Next.js para um marketplace de NFTs. Ele implementa funcionalidades de carrinho de compras, exibição de produtos e interações com usuários.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Tecnologias Utilizadas
+
+- **Next.js 15.1.6** – Framework para aplicações React com SSR e otimizações avançadas.
+- **TypeScript** – Tipagem ao código.
+- **Redux Toolkit** – Gerenciamento de estado simplificado.
+- **Styled Components** – Estilização baseada em componentes.
+- **Framer Motion** – Animações fluidas e otimizadas.
+- **React Toastify** – Exibição de notificações amigáveis ao usuário.
+- **Jest + Testing Library** – Testes unitários e integração.
+- **ESLint e Prettier** – Padronização e formatação do código.
+- **Docker** – Contêinerização da aplicação.
+
+## 📋 Funcionalidades Implementadas
+
+- 📌 Exibição de NFTs disponíveis para compra.
+- 🛒 Adição e remoção de itens no carrinho.
+- 💰 Cálculo automático do total da compra.
+- 🔄 Persistência do estado do carrinho com Redux.
+- 🔔 Notificações interativas para ações do usuário.
+- 🌟 Animações suaves para uma melhor experiência.
+- 📲 Layout Responsivo.
+
+## 📂 Configuração e Execução
+
+### ✅ Pré-requisitos
+
+Certifique-se de ter instalado:
+
+- Node.js (versão 18+)
+- Gerenciador de pacotes (Yarn ou npm)
+- Docker Desktop
+
+### 🔧 Instalação
+
+# Instale as dependências
+
+yarn install
+
+# ou
+
+npm install
+
+````
+
+### Configurar as Variáveis de Ambiente**
+Crie um arquivo `.env.local` na raiz do projeto e defina as variáveis necessárias:
+```
+NEXT_API_URL=https://starsoft-challenge-7dfd4a56a575.herokuapp.com
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### ▶️ Executando o projeto
+```sh
+# Inicie o Docker Desktop e execute o seguinte comando:
+docker compose up -d
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Inicie o servidor de desenvolvimento
+yarn dev
+# ou
+npm run dev
+````
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A aplicação estará disponível em `http://localhost:3001`.
 
-## Learn More
+### 🧪 Rodando testes
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+yarn test
+# ou
+npm test
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚠️ Possíveis Limitações e Melhorias Futuras
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 📌 Implementar autenticação de usuários.
+- 📌 Melhoras com uma manutenção continua do projeto.
+- 📌 Criei o arquivo tsconfig.test.json para rodar os testes, por conta da mudança automatica do jsx para preserved pelo next, acredito que existam outras formas de lidar com isso alem desta.
 
-## Deploy on Vercel
+## 📝 Observações
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Nas novas versões do Next.js, os métodos como getStaticProps e getServerSideProps não são mais suportados em arquivos dentro da pasta app. Por isso, optei por usar fetch diretamente, garantindo mais flexibilidade e simplicidade no consumo da API, além de facilitar o gerenciamento de estado na aplicação.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---

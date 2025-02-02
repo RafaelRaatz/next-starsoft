@@ -1,11 +1,11 @@
 import StyledComponentsRegistry from './lib/registry';
+import { Cart, Footer, Header } from '@/components';
 import { Providers } from '@/providers/providers';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Poppins } from 'next/font/google';
 import type { Metadata } from 'next';
-import { Cart, Footer, Header } from '@/components';
 import '@/styles/GlobalStyles.css';
-import 'react-toastify/dist/ReactToastify.css';
 
 const poppins = Poppins({
   weight: ['400', '600'],
@@ -43,6 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
+      <link rel='icon' href='/favicon.png' sizes='32x32' />
       <html lang='en'>
         <body className={poppins.variable}>
           <Providers>
