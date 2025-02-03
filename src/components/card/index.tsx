@@ -54,7 +54,7 @@ export function Card({ data }: CardProps) {
               </p>
               <div className='card-value'>
                 <Image
-                  src='/ellipse770.png'
+                  src='/Ellipse770.png'
                   alt='Logo'
                   width={29}
                   height={29}

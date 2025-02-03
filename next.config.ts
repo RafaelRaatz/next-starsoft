@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     styledComponents: true,
   },
   images: {
+    domains: ['fonts.googleapis.com', 'fonts.gstatic.com'],
     remotePatterns: [
       {
         protocol: 'https',

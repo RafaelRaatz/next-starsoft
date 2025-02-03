@@ -37,7 +37,7 @@ export function CartCard({
                 : product.description}
             </p>
             <div className='card-price'>
-              <Image src='/ellipse770.png' alt='Logo' width={29} height={29} />
+              <Image src='/Ellipse770.png' alt='Logo' width={29} height={29} />
               <h2>{totalProductValue} ETH</h2>
             </div>
           </div>

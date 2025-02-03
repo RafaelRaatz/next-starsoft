@@ -27,7 +27,7 @@ export function Header() {
             className='header-button'
           >
             <Image
-              src='/bag.png'
+              src='/Bag.png'
               alt='bag'
               width={33}
               height={33}

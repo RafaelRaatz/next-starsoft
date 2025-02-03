@@ -1,6 +1,6 @@
-import { CardList, Footer, Header } from '@/components';
 import { applyCorrections } from '@/utils/corrections';
 import { ProductProps } from '@/utils/types/products';
+import { CardList } from '@/components';
 
 async function getListProducts() {
   try {

@@ -1,8 +1,11 @@
 import { applyCorrections } from '@/utils/corrections';
 import { ProductProps } from '@/utils/types/products';
-import { Footer, Header } from '@/components';
 import { redirect } from 'next/navigation';
 import { DetailsCard } from './components';
+
+interface PageProps {
+  params: Promise<{ id: string }>;
+}
 
 async function getProduct(id: string): Promise<ProductProps | null> {
   try {
@@ -27,8 +30,9 @@ async function getProduct(id: string): Promise<ProductProps | null> {
   }
 }
 
-export default async function Home({ params }: { params: { id: string } }) {
-  const { id } = await params;
+export default async function Home({ params }: PageProps) {
+  const resolvedParams = await params;
+  const { id } = resolvedParams;
   if (!id) {
     redirect('/');
     return null;

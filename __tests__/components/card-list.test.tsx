@@ -1,9 +1,9 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { ProductProps } from '@/utils/types/products';
-import { CardList } from '@/components';
-import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import cartReducer from '@/store/cartSlice';
+import { CardList } from '@/components';
+import { Provider } from 'react-redux';
 
 const mockProducts: ProductProps[] = [
   {

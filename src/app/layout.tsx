@@ -43,7 +43,6 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <link rel='icon' href='/favicon.png' sizes='32x32' />
       <html lang='en'>
         <body className={poppins.variable}>
           <Providers>

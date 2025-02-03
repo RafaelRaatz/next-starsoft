@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { CartCard } from '@/components'; // Ajuste conforme o caminho do seu componente
 import { ProductProps } from '@/utils/types/products';
+import { CartCard } from '@/components';
 
 interface CartItem extends ProductProps {
   quantity: number;

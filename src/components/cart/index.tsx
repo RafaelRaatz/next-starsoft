@@ -73,7 +73,7 @@ export const Cart = () => {
                       <h2>Total</h2>
                       <div className='cart-total-price'>
                         <Image
-                          src='/ellipse770.png'
+                          src='/Ellipse770.png'
                           alt='Logo'
                           width={29}
                           height={29}
@@ -82,7 +82,13 @@ export const Cart = () => {
                       </div>
                     </div>
 
-                    <button className='cart-button'>FINALIZAR COMPRA</button>
+                    <motion.button
+                      className='cart-button'
+                      whileHover={{ scale: 1.0 }}
+                      whileTap={{ scale: 0.8, y: 4 }}
+                    >
+                      COMPRAR
+                    </motion.button>
                   </>
                 )}
               </div>
